@@ -1,0 +1,238 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #333;
+    font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 40px;
+    z-index: 3;
+}
+
+.header-logo img {
+    display: block;
+    height: 20px;
+    width: auto;
+}
+
+.header-logo:hover {
+    opacity: 0.8;
+}
+
+.header-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 45px;
+    align-items: center;
+}
+
+.header-list-item {
+    display: block;
+    list-style: none;
+    text-align: center;
+    font-weight: 700;
+}
+
+.header-list-item:hover {
+    opacity: 0.8;
+}
+
+.header-list-item-link {
+    text-decoration: none;
+    color: #333;
+}
+
+.header-list-item-link span {
+    display: block;
+    font-weight: 700;
+    text-align: center;
+}
+
+.header-list-item-link span:nth-child(1) {
+    font-size: 12px;
+    line-height: 14.4px;
+    font-family: "Lato", sans-serif;
+}
+
+.header-list-item-link span:nth-child(2) {
+    font-size: 10px;
+}
+
+.header-counseling-button {
+    color: white;
+    background-color: #F79214;
+    padding: 15px 18px;
+    border-radius: 38px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.hamburger {
+    display: none;
+    position: relative;
+    height: 20px;
+    width: 30px;
+}
+
+.hamburger div {
+    position: absolute;
+    left: 0;
+    background-color: gray;
+    height: 2px;
+    width: 30px;
+}
+
+.hamburger div:nth-child(1) {
+    bottom: 20px;
+}
+
+.hamburger div:nth-child(2) {
+    bottom: 10px;
+}
+
+.hamburger div:nth-child(3) {
+    bottom: 0px;
+}
+
+.top {
+    position: relative;
+    height: 700px;
+    overflow: hidden;
+}
+
+.top-img {
+    position: absolute;
+    z-index: 1;
+}
+
+.left-triangle {
+    top: 0;
+    left: -10px;
+}
+
+.right-triangle {
+    right: -10px;
+    bottom: 0;
+}
+
+.round {
+    top: 100px;
+    left: -50px;
+}
+
+.main-visual {
+    width: 800px;
+    top: -100px;
+    right: -10px;
+}
+
+.whole-visual {
+    display: none;
+}
+
+.top-container {
+    max-width: 1040px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    padding-top: 219px;
+}
+
+.top-content {
+    position: relative;
+    width: fit-content;
+    z-index: 2;
+}
+
+.badge {
+    position: absolute;
+    z-index: 1;
+    top: -100px;
+    left: 420px;
+}
+
+.top-content h2 {
+    font-size: 42px;
+    font-family: "Lato", sans-serif;
+    font-weight: 800;
+}
+
+.top-content a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    background-color: #F79214;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 38px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.top-content a:hover {
+    opacity: 0.8;
+}
+
+.top-content p {
+    font-size: 12px;
+}
+
+@media only screen and (max-width: 1140px) {
+    .header-list {
+        display: none;
+    }
+
+    .hamburger {
+        display: inline-block;
+    }
+
+    .top-container {
+        padding-left: 36px;
+        padding-right: 36px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .whole-visual {
+        display: block;
+        width: 100%;
+        padding-bottom: 10px;
+    }
+
+    .top-img {
+        display: none;
+    }
+
+    .top {
+        height: fit-content;
+    }
+
+    .top-container {
+        padding-top: 0;
+    }
+
+    .top-content h2 {
+        font-size: 25px;
+    }
+
+    .badge {
+        height: 100px;
+        width: 100px;
+        top: -20px;
+        left: 260px
+    }
+}
